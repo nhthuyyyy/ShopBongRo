@@ -136,6 +136,25 @@ header {
 .dropdown-menu li:first-child a { border-radius: 8px 8px 0 0; }
 .dropdown-menu li:last-child a { border-radius: 0 0 8px 8px; }
 
+/* Lab Links trong product-info */
+.product-info p {
+    margin-bottom: 8px;
+}
+.product-info p a {
+    color: #ff6b00;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+.product-info p a:hover {
+    background: rgba(255, 107, 0, 0.1);
+    color: #e55a00;
+    text-decoration: underline;
+}
+
 /* Header Actions */
 .header-actions {
     display: flex;

@@ -56,7 +56,7 @@ header {
 }
 
 /* Logo */
-.logo { flex-shrink: 0; }
+.logo { flex-shrink: 0; margin-right: 0px; }
 .logo-rain {
     font-size: 1.8rem;
     font-weight: 900;
@@ -100,24 +100,39 @@ header {
 }
 
 /* Dropdown */
+.dropdown { position: relative; }
 .dropdown-menu {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     position: absolute;
     top: 100%;
     left: 0;
     background: #222;
     min-width: 180px;
     border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
-    z-index: 100;
-    flex-direction: column;
-    gap: 0;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    z-index: 200;
+    /* Ẩn bằng opacity + pointer-events thay vì display:none để animation mượt */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    /* Padding-top tạo vùng đệm để chuột không bị hụt khi di chuyển từ link xuống */
+    padding-top: 8px;
+    margin-top: -8px;
 }
-.dropdown:hover .dropdown-menu { display: flex; }
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
 .dropdown-menu li a {
     padding: 10px 20px;
     border-radius: 0;
     font-size: 0.9rem;
+    white-space: nowrap;
 }
 .dropdown-menu li:first-child a { border-radius: 8px 8px 0 0; }
 .dropdown-menu li:last-child a { border-radius: 0 0 8px 8px; }
@@ -813,12 +828,21 @@ footer {
     /* Dropdown trong mobile menu */
     .dropdown-menu {
         position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        transition: none;
         display: none;
         background: #1a1a1a;
         box-shadow: none;
         border-radius: 0;
         width: 100%;
+        padding-top: 0;
+        margin-top: 0;
     }
+    /* Tắt hover trên mobile, chỉ dùng class .open */
+    .dropdown:hover .dropdown-menu,
+    .dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; display: none; }
     .dropdown.open .dropdown-menu { display: flex; }
     .dropdown-menu li a { font-size: 1rem; padding: 14px 40px; }
 

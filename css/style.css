@@ -102,7 +102,6 @@ header {
 /* Dropdown */
 .dropdown { position: relative; }
 .dropdown-menu {
-    display: flex;
     flex-direction: column;
     gap: 0;
     position: absolute;

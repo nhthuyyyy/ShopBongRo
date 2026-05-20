@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab5</title>
+    <style>
+        .menu_ngang{
+            background-color: aquamarine;
+            display: flex;
+            list-style: none;
+            padding: 0;
+           
+            transition: 0.3ms ease-in-out;
+            
+        }
+        .menu_ngang li{
+            padding: 10px;
+            line-height: 30px;
+            height: 40px;
+            border-radius: 5px;
+            
+        }
+        .menu_ngang li a{
+            text-decoration: none;
+        }
+        .menu_ngang li:hover{
+            background-color: yellow;
+        }
+        .menu_ngang li a:hover{
+            font-weight: bold;
+        }
+        .menu_doc{
+            background-color: blue;
+            width: 150px;
+            padding: 0%;
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+        }
+        .menu_doc li:hover{
+            background-color: rgb(90, 124, 218);
+            filter: brightness(130%);
+            font-style: oblique;
+        }
+        .menu_doc li{
+            padding: 5px;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+
+<body>
+<div>
+   <ul class="menu_ngang">
+    <li><a href="">Trang Chủ</a></li>
+    <li><a href="">Giới Thiệu</a></li>
+    <li><a href="">Sản Phẩm</a></li>
+    <li><a href="">Dịch Vụ</a></li>
+    <li><a href="">Liên Hệ</a></li>
+   </ul>
+</div> 
+<div>
+    <ul class="menu_doc">
+        <li>Trang Chủ</li>
+        <li>Giới Thiệu</li>
+        <li>Sản Phẩm</li>
+        <li>Dịch Vụ</li>
+        <li>Liên Hệ</li>
+       </ul>
+</div>   
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore - Lab 01</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <style>
+        /* CSS bổ sung để căn chỉnh bảng sản phẩm */
+        .product_table { width: 100%; border-collapse: collapse; text-align: center; }
+        .product_table td { padding: 10px; vertical-align: top; width: 33%; }
+        .product_name { color: #0066cc; font-weight: bold; display: block; margin-top: 5px; }
+        .product_price { color: red; font-weight: bold; }
+        .ad_img { width: 160px; margin-top: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="header">
+            <div id="banner_logo">
+                <a href="#"> <img src="images/bookstoreBanner.jpg" alt="Banner" style="border-radius: 10px;" width="1000px" height="300px"></a>
+            </div>
+        </div>
+
+        <div id="menu">
+            <div id="menu_left_corner"></div>
+            <div id="menu_content">
+                <ul id="hmenu">
+                    <li><a href="#"><img src="images/layout/home.png" /> TRANG CHỦ</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/services.png" /> DỊCH VỤ</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/favs.png" /> TIN KHUYẾN MÃI</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/car.png" /> GIAO HÀNG</a></li>
+                    <li class="devider">&nbsp;</li>
+                    <li><a href="#"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a></li>
+                </ul>
+            </div>
+            <div id="menu_right_corner"></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="path"></div>
+        
+        <div id="main">
+            <div id="left">
+                <div class="title">Loại sản phẩm</div>
+                <ul class="categories">
+                    <li class="lmenu1"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Văn Học</a></li>
+                    <li class="lmenu2"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Kinh Tế</a></li>
+                    <li class="lmenu1"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Tâm Lý</a></li>
+                    <li class="lmenu2"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Thiếu Nhi</a></li>
+                    <li class="lmenu1"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Giáo Khoa</a></li>
+                    <li class="lmenu2"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Ngoại Ngữ</a></li>
+                </ul>
+                
+                <div class="box">
+                    <div class="title">SP Khuyến mãi</div>
+                    <div class="box_content" style="height:190px;">
+                        <marquee direction="up" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">
+                            <div style="text-align:center; padding:5px;">
+                                <span> <b style="color:red;">Hoa Namiya( Tái Bản 2018)</b> </span><br/>
+                                <img src="images/Sach_2.jpg" width="80" /><br/>
+                                <b style="color:red;">63.000 </b>
+                            </div>
+                            <hr/>
+                            <div style="text-align:center; padding:5px;">
+                                <img src="images/Sach_8.png" width="80" /><br/>
+                                <span>Kinh Tế Cơ Bản</span><br/>
+                                <b style="color:red;">-15%</b>
+                            </div>
+                        </marquee>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content">
+                <div class="big_box">
+                    <div class="big_box_top"></div>
+                    <div class="big_box_mid">
+                        <table class="product_table">
+                            <tr>
+                                <td>
+                                    <span> <b style="color:red;">Quản trị tài chính</b> </span><br/>
+                                    <img src="images/Book_table_1.jpg" width="120" />
+                                    
+                                    <span class="product_price">150.000 VNĐ</span>
+                                </td>
+                                <td>
+                                    <span> <b style="color:red;">Tăng Lương</b> </span><br/>
+                                    <img src="images/Book_table_2.png" width="120" />
+                                    
+                                    <span class="product_price">125.000 VNĐ</span>
+                                </td>
+                                <td>
+                                    <span> <b style="color:red;">Khởi Nghiệp</b> </span><br/>
+                                    <img src="images/Book_table_3.png" width="120" />
+                                    
+                                    <span class="product_price">151.000</span>
+                                </td>
+                            </tr>
+                           
+                        </table>
+                    </div>
+                    <div class="big_box_bot"></div>
+                </div>
+            </div>
+
+            <div id="right">
+                <div class="title">Hãng sản xuất</div>
+                <ul class="categories">
+                    <li class="lmenu1"><a href="#"><img src="images/layout/checked.png" /> &nbsp;CHONMUA 365</a></li>
+                    <li class="lmenu2"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Deli</a></li>
+                    <li class="lmenu1"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Thiên Long</a></li>
+                    <li class="lmenu2"><a href="#"><img src="images/layout/checked.png" /> &nbsp;KLONG</a></li>
+                    <li class="lmenu1"><a href="#"><img src="images/layout/checked.png" /> &nbsp;Lazy Box</a></li>
+                    <li class="lmenu2"><a href="#"><img src="images/layout/checked.png" /> &nbsp;M&G</a></li>
+                </ul>
+                <div class="box">
+                    <div class="title">Quảng cáo</div>
+                    <div class="box_content" style="height:170px; text-align: center;">
+                        <img src="images/Sach_7.jpg" class="ad_img" alt="Quảng cáo" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div style="clear:both; height:10px;"></div>
+        
+        <div id="footer">
+            <p>Copyright&copy; Cửa hàng sách tốt ABC</p>
+            Địa chỉ: 180 Cao Lỗ Phường 4 Quận 8 Tp.HCM
+            <p>Điện thoại: 0901234567</p>
+        </div>
+
+    </div>
+</body>
+</html>

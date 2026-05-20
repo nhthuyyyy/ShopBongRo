@@ -1,0 +1,212 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BookStore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css" integrity="sha256-XoaMnoYC5TH6/+ihMEnospgm0J1PM/nioxbOUdnM8HY=" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&family=Dancing+Script:wght@600&family=Kanit&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="path/to/fork-awesome/css/fork-awesome.min.css">
+    <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; }
+        .form-container {
+            width: 550px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        h2 { text-align: center; font-size: 18px; margin-bottom: 20px; }
+        .form-row { display: flex; margin-bottom: 12px; align-items: flex-start; }
+        .form-row label { width: 130px; font-size: 14px; flex-shrink: 0; }
+        .form-row input[type="text"], .form-row select, .form-row textarea {
+            flex: 1; padding: 4px; border: 1px solid #ccc;
+        }
+        .input-group { display: flex; align-items: center; gap: 8px; flex: 1; }
+        .short { width: 60px; flex: none !important; }
+        .medium { width: 100px; flex: none !important; }
+        .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; flex: 1; }
+        .checkbox-grid label { width: auto; font-size: 13px; display: flex; align-items: center; gap: 5px; }
+        .button-group { text-align: center; margin-top: 20px; display: flex; justify-content: center; gap: 10px; }
+        button { padding: 5px 20px; cursor: pointer; }
+    </style>
+
+    <div id="container">
+
+        <!-- Hình Banner hoặc Logo  -->
+        <div id="header">
+            <div id="banner_logo">
+                <a href="#"> <img src="images/bookstoreBanner.jpg"  alt="" style="border-radius: 10px;" width="1000px" height="300px" ></a>
+            </div>
+        </div>
+
+        <!-- MENU CHÍNH  -->
+        <div id="menu">
+            <div id="menu_left_corner"></div>
+
+            <div id="menu_content">
+                <ul id="hmenu">
+                    <li>
+                        <a href="#"><img src="images/layout/home.png" /> TRANG CHỦ</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="#"><img src="images/layout/services.png" /> DỊCH VỤ</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="#"><img src="images/layout/favs.png" /> TIN KHUYẾN MÃI</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="#"><img src="images/layout/car.png" /> GIAO HÀNG</a>
+                    </li>
+                    <li class="devider">&nbsp;</li>
+                    <li>
+                        <a href="../Vi_du/index.html"
+                        target="k_giua"><img src="images/layout/user_add.png" /> ĐĂNG NHẬP</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div id="menu_right_corner"></div>
+            <div style="clear:both"></div>
+        </div>
+
+        <div id="path"></div>
+        <div id="main">
+
+            <!-- MENU bên trái -->
+            <div id="left">
+                <div class="title">Loại sản phẩm</div>
+                <ul class="categories">
+
+                    <li class="lmenu1">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Văn Học</a>
+                    </li>
+                    <li class="lmenu2">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Kinh Tế</a>
+                    </li>
+                    <li class="lmenu1">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Tâm Lý</a>
+                    </li>
+                    <li class="lmenu2">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Thiếu Nhi</a>
+                    </li>
+                    <li class="lmenu1">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Giáo Khoa</a>
+                    </li>
+                    <li class="lmenu2">
+                        <a href=""> <img src="images/layout/checked.png" /> &nbsp;&nbsp;Ngoại Ngữ</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+
+            <!-- CONTENT hiển thị ở giữa  -->
+            <div id="content">
+                <div class="form-container">
+                    <h2>THÊM SẢN PHẨM MỚI</h2>
+                    
+                    <form action="xlThem.php" method="POST" enctype="multipart/form-data">
+                        
+                        <div class="form-row">
+                            <label>Mã sản phẩm</label>
+                            <input type="text" name="nmProID">
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Tên sản phẩm</label>
+                            <input type="text" name="nmProName">
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Hình ảnh</label>
+                            <input type="file" name="nmProImg">
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Hãng sản xuất</label>
+                            <select name="nmMan">
+                                <option value="Thiên Long">Thiên Long</option>
+                                <option value="Bến Nghé">Bến Nghé</option>
+                            </select>
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Kích thước</label>
+                            <div class="input-group">
+                                W: <input type="text" name="nmWidth" class="short">
+                                H: <input type="text" name="nmHeight" class="short"> mm
+                            </div>
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Số trang</label>
+                            <div class="input-group">
+                                <input type="text" name="nmCount" class="medium"> trang
+                            </div>
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Tác giả</label>
+                            <input type="text" name="nmTacGia">
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Giá</label>
+                            <div class="input-group">
+                                <input type="text" name="nmPrice" class="medium">
+                                <span>Màu:</span>
+                                <input type="color" name="nmColor">
+                            </div>
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Xuất xứ</label>
+                            <input type="text" name="nmLive">
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Thể Loại</label>
+                            <div class="checkbox-grid">
+                                <label><input type="checkbox" name="nmFunctions[]" value="Văn học"> Văn học</label>
+                                <label><input type="checkbox" name="nmFunctions[]" value="Thiếu nhi"> Thiếu nhi</label>
+                                <label><input type="checkbox" name="nmFunctions[]" value="Kinh tế"> Kinh tế</label>
+                                <label><input type="checkbox" name="nmFunctions[]" value="Giáo khoa"> Giáo khoa</label>
+                                <label><input type="checkbox" name="nmFunctions[]" value="Tâm lý"> Tâm lý</label>
+                                <label><input type="checkbox" name="nmFunctions[]" value="Ngoại ngữ"> Ngoại ngữ</label>
+                            </div>
+                        </div>
+                
+                        <div class="form-row">
+                            <label>Mô tả chi tiết</label>
+                            <textarea name="nmProDet" rows="5"></textarea>
+                        </div>
+                
+                        <div class="button-group">
+                            <button type="submit" name="btnThem">Thêm</button>
+                            <button type="reset">Xóa</button>
+                        </div>
+                    </form>
+                </div>
+
+            <!-- MENU bên phải  -->
+            <div id="right">
+                <!-- Cần bổ sung thêm (tương tự như <div id="left"> ) -->
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

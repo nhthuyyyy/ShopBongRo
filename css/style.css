@@ -843,13 +843,17 @@ footer {
         color: white;
     }
 
+    /* Hiện nút X trên mobile */
+    .nav-close { display: block; }
+
     /* Dropdown trong mobile menu */
     .dropdown-menu {
+        flex-direction: column;
         position: static;
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        visibility: hidden;
         transform: none;
-        transition: none;
+        transition: opacity 0.2s, visibility 0.2s;
         display: none;
         background: #1a1a1a;
         box-shadow: none;
@@ -857,15 +861,23 @@ footer {
         width: 100%;
         padding-top: 0;
         margin-top: 0;
+        max-height: 0;
+        overflow: hidden;
     }
     /* Tắt hover trên mobile, chỉ dùng class .open */
     .dropdown:hover .dropdown-menu,
-    .dropdown:focus-within .dropdown-menu { opacity: 1; visibility: visible; display: none; }
-    .dropdown.open .dropdown-menu { display: flex; }
+    .dropdown:focus-within .dropdown-menu { opacity: 0; visibility: hidden; display: none; }
+    .dropdown.open .dropdown-menu { 
+        display: flex;
+        opacity: 1;
+        visibility: visible;
+        max-height: 500px;
+    }
     .dropdown-menu li a { font-size: 1rem; padding: 14px 40px; }
 
     /* Nút đóng menu (X) */
     .nav-close {
+        display: none;
         position: absolute;
         top: 20px;
         right: 20px;

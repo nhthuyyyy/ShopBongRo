@@ -3,7 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản Phẩm | Milkun SHOP</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>Sản Phẩm Bóng Rổ | MilkunSHOP - Bóng, Giày, Áo NBA Chính Hãng</title>
+    <meta name="description" content="Mua sắm sản phẩm bóng rổ chính hãng tại MilkunSHOP. Bóng Spalding, Wilson, giày Nike Jordan, áo NBA Lakers, Warriors. Giá tốt, giao nhanh 2h, đổi trả 7 ngày.">
+    <meta name="keywords" content="mua bóng rổ, giày bóng rổ giá rẻ, áo NBA chính hãng, phụ kiện bóng rổ, Spalding NBA, Nike Jordan, sản phẩm basketball">
+    <meta name="author" content="MilkunSHOP">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milkunshop.com/san-pham.html">
+    <meta property="og:title" content="Sản Phẩm Bóng Rổ | MilkunSHOP">
+    <meta property="og:description" content="Mua sắm sản phẩm bóng rổ chính hãng. Bóng Spalding, giày Nike Jordan, áo NBA. Giá tốt, giao nhanh.">
+    <meta property="og:image" content="https://milkunshop.com/images/products-og.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://milkunshop.com/san-pham.html">
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -14,7 +31,7 @@
         <div class="topbar-inner">
             <span><i class="fas fa-phone"></i> Hotline: 0909 123 456</span>
             <span><i class="fas fa-envelope"></i> Milkun@gmail.com</span>
-            <span><i class="fas fa-map-marker-alt"></i> Quận 1, TP. Hồ Chí Minh</span>
+            <span><i class="fas fa-map-marker-alt"></i> Quận 8, TP. Hồ Chí Minh</span>
         </div>
     </div>
 
@@ -56,19 +73,19 @@
     </header>
 
     <!-- PRODUCTS PAGE -->
-    <section class="products-page">
+    <section class="products-page" role="main">
         <div class="products-page-inner">
             <!-- SIDEBAR TRÁI -->
-            <aside class="products-sidebar">
+            <aside class="products-sidebar" role="complementary" aria-label="Product filters">
                 <!-- FILTER DANH MỤC -->
                 <div class="filter-section">
                     <h3>📦 Danh Mục</h3>
-                    <ul class="filter-list">
-                        <li><a href="#" onclick="filterByCategory('all')" class="filter-active">Tất Cả Sản Phẩm</a></li>
-                        <li><a href="#" onclick="filterByCategory('ball')">🏀 Bóng Rổ</a></li>
-                        <li><a href="#" onclick="filterByCategory('shoes')">👟 Giày Bóng Rổ</a></li>
-                        <li><a href="#" onclick="filterByCategory('jersey')">👕 Áo Thi Đấu</a></li>
-                        <li><a href="#" onclick="filterByCategory('accessories')">🧢 Phụ Kiện</a></li>
+                    <ul class="filter-list" role="menu">
+                        <li role="none"><a href="#" onclick="filterByCategory('all')" class="filter-active" role="menuitem">Tất Cả Sản Phẩm</a></li>
+                        <li role="none"><a href="#" onclick="filterByCategory('ball')" role="menuitem">🏀 Bóng Rổ</a></li>
+                        <li role="none"><a href="#" onclick="filterByCategory('shoes')" role="menuitem">👟 Giày Bóng Rổ</a></li>
+                        <li role="none"><a href="#" onclick="filterByCategory('jersey')" role="menuitem">👕 Áo Thi Đấu</a></li>
+                        <li role="none"><a href="#" onclick="filterByCategory('accessories')" role="menuitem">🧢 Phụ Kiện</a></li>
                     </ul>
                 </div>
 
@@ -157,7 +174,7 @@
             <div class="footer-col">
                 <h4>Liên Hệ</h4>
                 <ul class="contact-list">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyễn Huệ, Quận 1, TP.HCM</li>
+                    <li><i class="fas fa-map-marker-alt"></i>  180 Cao Lỗ, Phường 4, Quận 8, TP Hồ Chí Minh</li>
                     <li><i class="fas fa-phone"></i> 0909 123 456</li>
                     <li><i class="fas fa-envelope"></i> Milkun@gmail.com</li>
                     <li><i class="fas fa-clock"></i> 8:00 - 21:00 (Tất cả các ngày)</li>
@@ -199,5 +216,64 @@
 
     <script src="js/main.js"></script>
     <script src="js/products.js"></script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Trang Chủ",
+          "item": "https://milkunshop.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sản Phẩm",
+          "item": "https://milkunshop.com/san-pham.html"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- CollectionPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Sản Phẩm Bóng Rổ",
+      "description": "Bộ sưu tập đầy đủ các sản phẩm bóng rổ chính hãng: bóng, giày, áo thi đấu và phụ kiện",
+      "url": "https://milkunshop.com/san-pham.html",
+      "mainEntity": {
+        "@type": "ItemList",
+        "numberOfItems": "16",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Bóng Rổ"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Giày Bóng Rổ"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Áo Thi Đấu"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Phụ Kiện"
+          }
+        ]
+      }
+    }
+    </script>
 </body>
 </html>

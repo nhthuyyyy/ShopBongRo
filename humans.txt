@@ -1,0 +1,29 @@
+/* TEAM */
+Developer: MilkunSHOP Development Team
+Site: https://milkunshop.com
+Location: Ho Chi Minh City, Vietnam
+
+/* THANKS */
+Search Engine Optimization: Google, Bing
+Fonts: Google Fonts
+Icons: Font Awesome
+
+/* SITE */
+Last update: 2026/05/21
+Language: Vietnamese / Tiếng Việt
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: Responsive Design, PWA, Schema.org
+Software: Git, Node.js
+
+/* CONTACT */
+Email: Milkun@gmail.com
+Phone: +84 909 123 456
+Address: 180 Cao Lỗ, Phường 4, Quận 8, TP Hồ Chí Minh
+
+/* SOCIAL */
+Facebook: https://facebook.com/milkunshop
+Instagram: https://instagram.com/milkunshop
+TikTok: https://tiktok.com/@milkunshop
+YouTube: https://youtube.com/@milkunshop

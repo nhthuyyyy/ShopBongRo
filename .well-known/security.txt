@@ -1,0 +1,10 @@
+Contact: mailto:security@milkunshop.com
+Contact: https://milkunshop.com/lien-he.html
+Expires: 2027-05-21T23:59:59.000Z
+Preferred-Languages: vi, en
+Canonical: https://milkunshop.com/.well-known/security.txt
+Policy: https://milkunshop.com/security-policy.html
+Acknowledgments: https://milkunshop.com/security-acknowledgments.html
+
+# If you discover a security vulnerability, please report it to us.
+# We appreciate your efforts to responsibly disclose your findings.

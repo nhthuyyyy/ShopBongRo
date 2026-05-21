@@ -3,7 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MilkunSHOP | Cửa hàng bóng rổ Sài Gòn - Basketball & more</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>MilkunSHOP - Cửa Hàng Bóng Rổ Số 1 Sài Gòn | Basketball & More</title>
+    <meta name="description" content="MilkunSHOP - Cửa hàng bóng rổ uy tín tại TP.HCM. Chuyên cung cấp bóng rổ Spalding, Wilson, giày Nike Jordan, áo NBA chính hãng. Giao hàng nhanh 2h, đổi trả 7 ngày.">
+    <meta name="keywords" content="bóng rổ, giày bóng rổ, áo NBA, phụ kiện bóng rổ, Spalding, Wilson, Nike Jordan, cửa hàng bóng rổ Sài Gòn, basketball shop">
+    <meta name="author" content="MilkunSHOP">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Vietnamese">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://milkunshop.com/">
+    <meta property="og:title" content="MilkunSHOP - Cửa Hàng Bóng Rổ Số 1 Sài Gòn">
+    <meta property="og:description" content="Chuyên cung cấp bóng rổ, giày, áo thi đấu và phụ kiện chính hãng. Giao hàng nhanh 2h, đổi trả 7 ngày.">
+    <meta property="og:image" content="https://milkunshop.com/images/og-image.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://milkunshop.com/">
+    <meta property="twitter:title" content="MilkunSHOP - Cửa Hàng Bóng Rổ Số 1 Sài Gòn">
+    <meta property="twitter:description" content="Chuyên cung cấp bóng rổ, giày, áo thi đấu và phụ kiện chính hãng. Giao hàng nhanh 2h, đổi trả 7 ngày.">
+    <meta property="twitter:image" content="https://milkunshop.com/images/twitter-image.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://milkunshop.com/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ff6b00">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="MilkunSHOP">
+    <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+    
+    <!-- Structured Data / Schema.org for AIEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Store",
+      "name": "MilkunSHOP",
+      "description": "Cửa hàng bóng rổ uy tín số 1 Sài Gòn. Chuyên cung cấp bóng rổ, giày, áo và phụ kiện chính hãng.",
+      "url": "https://milkunshop.com",
+      "logo": "https://milkunshop.com/images/logo.png",
+      "image": "https://milkunshop.com/images/store.jpg",
+      "telephone": "+84909123456",
+      "email": "Milkun@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "180 Cao Lỗ, Phường 4",
+        "addressLocality": "Quận 8",
+        "addressRegion": "TP Hồ Chí Minh",
+        "addressCountry": "VN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "10.7379",
+        "longitude": "106.6752"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "08:00",
+        "closes": "21:00"
+      },
+      "priceRange": "$$",
+      "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+      "currenciesAccepted": "VND"
+    }
+    </script>
+    
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
@@ -14,15 +86,17 @@
         <div class="topbar-inner">
             <span><i class="fas fa-phone"></i> Hotline: 0909 123 456</span>
             <span><i class="fas fa-envelope"></i> Milkun@gmail.com</span>
-            <span><i class="fas fa-map-marker-alt"></i> Quận 1, TP. Hồ Chí Minh</span>
+            <span><i class="fas fa-map-marker-alt"></i> Quận 8, TP. Hồ Chí Minh</span>
         </div>
     </div>
 
     <!-- HEADER -->
-    <header>
+    <header role="banner">
         <div class="header-inner">
-            <div class="logo">
-                <span class="logo-rain">Milkun</span><span class="logo-shop">SHOP</span>
+            <div class="logo" itemscope itemtype="https://schema.org/Organization">
+                <a href="index.html" itemprop="url">
+                    <span class="logo-rain" itemprop="name">Milkun</span><span class="logo-shop">SHOP</span>
+                </a>
                 <p class="logo-sub">Basketball & more</p>
             </div>
 
@@ -33,7 +107,7 @@
                 <span></span>
             </button>
 
-            <nav class="main-nav" id="mainNav">
+            <nav class="main-nav" id="mainNav" role="navigation" aria-label="Main navigation">
                 <!-- Nút đóng menu trên mobile -->
                 <button class="nav-close" id="navClose" aria-label="Đóng menu">✕</button>
                 <ul>
@@ -56,19 +130,19 @@
     </header>
 
     <!-- HERO BANNER -->
-    <section class="hero">
+    <section class="hero" role="banner">
         <div class="hero-content">
             <p class="hero-sub">🏀 Cửa Hàng Bóng Rổ Số 1 Sài Gòn</p>
             <h1>Milkun</h1>
             <h2>Basketball & More</h2>
             <p class="hero-desc">Chuyên cung cấp bóng rổ, giày, áo thi đấu và phụ kiện chính hãng. Đam mê bóng rổ - Chúng tôi có tất cả!</p>
             <div class="hero-btns">
-                <a href="san-pham.html" class="btn-primary">Mua Ngay</a>
-                <a href="gioi-thieu.html" class="btn-outline">Tìm Hiểu Thêm</a>
+                <a href="san-pham.html" class="btn-primary" aria-label="Xem sản phẩm và mua ngay">Mua Ngay</a>
+                <a href="gioi-thieu.html" class="btn-outline" aria-label="Tìm hiểu thêm về MilkunSHOP">Tìm Hiểu Thêm</a>
             </div>
         </div>
-        <div class="hero-image">
-            <div class="ball-animation">🏀</div>
+        <div class="hero-image" aria-hidden="true">
+            <div class="ball-animation" role="img" aria-label="Basketball animation">🏀</div>
         </div>
     </section>
 
@@ -361,13 +435,13 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer role="contentinfo">
         <div class="footer-inner">
             <div class="footer-col">
-                <div class="footer-logo">
-                    <span class="logo-rain">Milkun</span><span class="logo-shop">SHOP</span>
+                <div class="footer-logo" itemscope itemtype="https://schema.org/Organization">
+                    <span class="logo-rain" itemprop="name">Milkun</span><span class="logo-shop">SHOP</span>
                 </div>
-                <p>Cửa hàng bóng rổ uy tín số 1 Sài Gòn. Chuyên cung cấp bóng rổ, giày, áo và phụ kiện chính hãng.</p>
+                <p itemprop="description">Cửa hàng bóng rổ uy tín số 1 Sài Gòn. Chuyên cung cấp bóng rổ, giày, áo và phụ kiện chính hãng.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook"></i></a>
                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -610,6 +684,143 @@
             const btn = document.querySelector('.back-to-top');
             btn.style.display = window.scrollY > 300 ? 'block' : 'none';
         });
+    </script>
+    
+    <!-- Structured Data for Products (AIEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Sản Phẩm Nổi Bật",
+      "itemListElement": [
+        {
+          "@type": "Product",
+          "position": 1,
+          "name": "Bóng Rổ Spalding NBA",
+          "description": "Size 7 - Da tổng hợp cao cấp, chuẩn thi đấu NBA",
+          "image": "https://milkunshop.com/images/spalding-nba.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "Spalding"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "850000",
+            "priceCurrency": "VND",
+            "availability": "https://schema.org/InStock",
+            "url": "https://milkunshop.com/san-pham.html"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "128"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 2,
+          "name": "Nike Air Jordan 1 Retro",
+          "description": "Giày bóng rổ huyền thoại, đế cao su chống trượt",
+          "image": "https://milkunshop.com/images/jordan-1.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "Nike"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "3500000",
+            "priceCurrency": "VND",
+            "availability": "https://schema.org/InStock",
+            "url": "https://milkunshop.com/san-pham.html"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5",
+            "reviewCount": "256"
+          }
+        },
+        {
+          "@type": "Product",
+          "position": 3,
+          "name": "Áo NBA Lakers #23 LeBron",
+          "description": "Vải thoáng khí, in số chính hãng, đủ size S-XXL",
+          "image": "https://milkunshop.com/images/lakers-lebron.jpg",
+          "brand": {
+            "@type": "Brand",
+            "name": "NBA"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": "450000",
+            "priceCurrency": "VND",
+            "availability": "https://schema.org/InStock",
+            "url": "https://milkunshop.com/san-pham.html"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4",
+            "reviewCount": "89"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- FAQ Schema for AIEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "MilkunSHOP có giao hàng nhanh không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có, MilkunSHOP giao hàng nhanh trong vòng 2 giờ cho khu vực TP.HCM. Chúng tôi cam kết giao hàng nhanh chóng và đúng hẹn."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sản phẩm có chính hãng không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Tất cả sản phẩm tại MilkunSHOP đều là hàng chính hãng 100%, có tem nhập khẩu đầy đủ. Chúng tôi cam kết hoàn tiền nếu phát hiện hàng giả."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Chính sách đổi trả như thế nào?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "MilkunSHOP hỗ trợ đổi trả trong vòng 7 ngày không cần lý do. Sản phẩm còn nguyên tem mác, chưa qua sử dụng sẽ được đổi trả miễn phí."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Có hỗ trợ tư vấn sản phẩm không?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Có, đội ngũ nhân viên của chúng tôi am hiểu bóng rổ và sẵn sàng tư vấn 24/7 qua hotline 0909 123 456 hoặc email Milkun@gmail.com."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- WebSite Schema for Search Box -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "MilkunSHOP",
+      "url": "https://milkunshop.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://milkunshop.com/san-pham.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
     </script>
 </body>
 </html>

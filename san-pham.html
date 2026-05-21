@@ -8,11 +8,196 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-    <div style="text-align: center; padding: 100px 20px;">
-        <h1>🏀 Sản Phẩm</h1>
-        <p>Trang này đang được phát triển...</p>
-        <a href="index.html" class="btn-primary" style="display: inline-block; margin-top: 20px;">Quay Lại Trang Chủ</a>
+
+    <!-- TOP BAR -->
+    <div class="topbar">
+        <div class="topbar-inner">
+            <span><i class="fas fa-phone"></i> Hotline: 0909 123 456</span>
+            <span><i class="fas fa-envelope"></i> Milkun@gmail.com</span>
+            <span><i class="fas fa-map-marker-alt"></i> Quận 1, TP. Hồ Chí Minh</span>
+        </div>
     </div>
+
+    <!-- HEADER -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <span class="logo-rain">Milkun</span><span class="logo-shop">SHOP</span>
+                <p class="logo-sub">Basketball & more</p>
+            </div>
+
+            <!-- Hamburger button (chỉ hiện trên mobile) -->
+            <button class="hamburger" id="hamburger" aria-label="Mở menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="mainNav">
+                <!-- Nút đóng menu trên mobile -->
+                <button class="nav-close" id="navClose" aria-label="Đóng menu">✕</button>
+                <ul>
+                    <li><a href="index.html">Trang Chủ</a></li>
+                    <li><a href="san-pham.html" class="active">Sản Phẩm</a></li>
+                    <li><a href="gioi-thieu.html">Giới Thiệu</a></li>
+                    <li><a href="lien-he.html">Liên Hệ</a></li>
+                    <li><a href="lab.html">Lab Thực Hành</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <div class="search-box">
+                    <input type="text" placeholder="Tìm kiếm sản phẩm...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <a href="#" class="cart-btn"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- PRODUCTS PAGE -->
+    <section class="products-page">
+        <div class="products-page-inner">
+            <!-- SIDEBAR TRÁI -->
+            <aside class="products-sidebar">
+                <!-- FILTER DANH MỤC -->
+                <div class="filter-section">
+                    <h3>📦 Danh Mục</h3>
+                    <ul class="filter-list">
+                        <li><a href="#" onclick="filterByCategory('all')" class="filter-active">Tất Cả Sản Phẩm</a></li>
+                        <li><a href="#" onclick="filterByCategory('ball')">🏀 Bóng Rổ</a></li>
+                        <li><a href="#" onclick="filterByCategory('shoes')">👟 Giày Bóng Rổ</a></li>
+                        <li><a href="#" onclick="filterByCategory('jersey')">👕 Áo Thi Đấu</a></li>
+                        <li><a href="#" onclick="filterByCategory('accessories')">🧢 Phụ Kiện</a></li>
+                    </ul>
+                </div>
+
+                <!-- FILTER GIÁ -->
+                <div class="filter-section">
+                    <h3>💰 Phân Khúc Giá</h3>
+                    <ul class="filter-list">
+                        <li><a href="#" onclick="filterByPrice(0, 500000)">Dưới 500.000₫</a></li>
+                        <li><a href="#" onclick="filterByPrice(500000, 1000000)">500.000₫ - 1.000.000₫</a></li>
+                        <li><a href="#" onclick="filterByPrice(1000000, 2000000)">1.000.000₫ - 2.000.000₫</a></li>
+                        <li><a href="#" onclick="filterByPrice(2000000, 5000000)">2.000.000₫ - 5.000.000₫</a></li>
+                        <li><a href="#" onclick="filterByPrice(5000000, 999999999)">Trên 5.000.000₫</a></li>
+                    </ul>
+                </div>
+
+                <!-- FILTER ĐÁNH GIÁ -->
+                <div class="filter-section">
+                    <h3>⭐ Đánh Giá</h3>
+                    <ul class="filter-list">
+                        <li><a href="#" onclick="filterByRating(5)">⭐⭐⭐⭐⭐ 5 Sao</a></li>
+                        <li><a href="#" onclick="filterByRating(4)">⭐⭐⭐⭐ 4 Sao Trở Lên</a></li>
+                        <li><a href="#" onclick="filterByRating(3)">⭐⭐⭐ 3 Sao Trở Lên</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- PRODUCTS CONTENT -->
+            <main class="products-content">
+                <!-- HEADER PRODUCTS -->
+                <div class="products-header">
+                    <h1>🛍️ Sản Phẩm</h1>
+                    <div class="products-sort">
+                        <label>Sắp xếp:</label>
+                        <select onchange="sortProducts(this.value)">
+                            <option value="newest">Mới Nhất</option>
+                            <option value="price-low">Giá Thấp Đến Cao</option>
+                            <option value="price-high">Giá Cao Đến Thấp</option>
+                            <option value="popular">Phổ Biến Nhất</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- PRODUCTS GRID -->
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products sẽ được load bằng JavaScript -->
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-col">
+                <div class="footer-logo">
+                    <span class="logo-rain">Milkun</span><span class="logo-shop">SHOP</span>
+                </div>
+                <p>Cửa hàng bóng rổ uy tín số 1 Sài Gòn. Chuyên cung cấp bóng rổ, giày, áo và phụ kiện chính hãng.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Danh Mục</h4>
+                <ul>
+                    <li><a href="#">Bóng rổ</a></li>
+                    <li><a href="#">Giày bóng rổ</a></li>
+                    <li><a href="#">Áo thi đấu</a></li>
+                    <li><a href="#">Phụ kiện</a></li>
+                    <li><a href="#">Hàng mới về</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Hỗ Trợ</h4>
+                <ul>
+                    <li><a href="#">Chính sách đổi trả</a></li>
+                    <li><a href="#">Hướng dẫn mua hàng</a></li>
+                    <li><a href="#">Chính sách bảo hành</a></li>
+                    <li><a href="#">Câu hỏi thường gặp</a></li>
+                    <li><a href="lien-he.html">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Liên Hệ</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyễn Huệ, Quận 1, TP.HCM</li>
+                    <li><i class="fas fa-phone"></i> 0909 123 456</li>
+                    <li><i class="fas fa-envelope"></i> Milkun@gmail.com</li>
+                    <li><i class="fas fa-clock"></i> 8:00 - 21:00 (Tất cả các ngày)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Milkun. All rights reserved. | Cửa hàng bóng rổ Sài Gòn</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- CART MODAL -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>🛒 Giỏ Hàng</h2>
+                <button class="cart-modal-close" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-modal-body">
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-cart">Giỏ hàng trống</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <strong>Tổng cộng:</strong>
+                    <span id="cartTotal">0₫</span>
+                </div>
+                <button class="btn-primary" onclick="checkout()">Thanh Toán</button>
+                <button class="btn-outline" onclick="closeCart()">Tiếp Tục Mua</button>
+            </div>
+        </div>
+    </div>
+
     <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
 </body>
 </html>

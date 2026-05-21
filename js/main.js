@@ -121,43 +121,53 @@ function checkout() {
 }
 
 // Click vào giỏ hàng để mở
-document.querySelector('.cart-btn').addEventListener('click', (e) => {
-    e.preventDefault();
-    openCart();
-});
+const cartBtn = document.querySelector('.cart-btn');
+if (cartBtn) {
+    cartBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openCart();
+    });
+}
 
 // Đóng modal khi click ngoài
-document.getElementById('cartModal').addEventListener('click', (e) => {
-    if (e.target.id === 'cartModal') {
-        closeCart();
-    }
-});
+const cartModal = document.getElementById('cartModal');
+if (cartModal) {
+    cartModal.addEventListener('click', (e) => {
+        if (e.target.id === 'cartModal') {
+            closeCart();
+        }
+    });
+}
 
 // ===== HAMBURGER MENU =====
-const hamburger = document.getElementById('hamburger');
-const mainNav   = document.getElementById('mainNav');
-const navClose  = document.getElementById('navClose');
+document.addEventListener('DOMContentLoaded', () => {
+    const hamburger = document.getElementById('hamburger');
+    const mainNav   = document.getElementById('mainNav');
+    const navClose  = document.getElementById('navClose');
 
-// Mở menu
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
-    mainNav.classList.toggle('open');
-    document.body.style.overflow = mainNav.classList.contains('open') ? 'hidden' : '';
-});
+    if (hamburger && mainNav && navClose) {
+        // Mở menu
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('open');
+            mainNav.classList.toggle('open');
+            document.body.style.overflow = mainNav.classList.contains('open') ? 'hidden' : '';
+        });
 
-// Đóng menu bằng nút X
-navClose.addEventListener('click', () => {
-    hamburger.classList.remove('open');
-    mainNav.classList.remove('open');
-    document.body.style.overflow = '';
-});
+        // Đóng menu bằng nút X
+        navClose.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mainNav.classList.remove('open');
+            document.body.style.overflow = '';
+        });
 
-// Đóng menu khi click ra ngoài
-mainNav.addEventListener('click', (e) => {
-    if (e.target === mainNav) {
-        hamburger.classList.remove('open');
-        mainNav.classList.remove('open');
-        document.body.style.overflow = '';
+        // Đóng menu khi click ra ngoài
+        mainNav.addEventListener('click', (e) => {
+            if (e.target === mainNav) {
+                hamburger.classList.remove('open');
+                mainNav.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
     }
 });
 

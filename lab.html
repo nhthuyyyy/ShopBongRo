@@ -336,65 +336,6 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
-    <script>
-        // ===== GIỎ HÀNG =====
-        let cartCount = 0;
-        function addToCart(btn) {
-            cartCount++;
-            document.querySelector('.cart-count').textContent = cartCount;
-            btn.textContent = '✓ Đã Thêm!';
-            btn.style.background = '#28a745';
-            setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-cart-plus"></i> Thêm Vào Giỏ';
-                btn.style.background = '';
-            }, 1500);
-        }
-
-        // ===== HAMBURGER MENU =====
-        const hamburger = document.getElementById('hamburger');
-        const mainNav   = document.getElementById('mainNav');
-        const navClose  = document.getElementById('navClose');
-
-        // Mở menu
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('open');
-            mainNav.classList.toggle('open');
-            document.body.style.overflow = mainNav.classList.contains('open') ? 'hidden' : '';
-        });
-
-        // Đóng menu bằng nút X
-        navClose.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            mainNav.classList.remove('open');
-            document.body.style.overflow = '';
-        });
-
-        // Đóng menu khi click ra ngoài
-        mainNav.addEventListener('click', (e) => {
-            if (e.target === mainNav) {
-                hamburger.classList.remove('open');
-                mainNav.classList.remove('open');
-                document.body.style.overflow = '';
-            }
-        });
-
-        // ===== DROPDOWN MOBILE (tap để mở) =====
-        const dropdownToggle = document.getElementById('dropdownToggle');
-        const dropdownItem   = document.getElementById('dropdownItem');
-
-        dropdownToggle.addEventListener('click', (e) => {
-            // Chỉ toggle trên mobile
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                dropdownItem.classList.toggle('open');
-            }
-        });
-
-        // ===== BACK TO TOP =====
-        window.addEventListener('scroll', () => {
-            const btn = document.querySelector('.back-to-top');
-            btn.style.display = window.scrollY > 300 ? 'block' : 'none';
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

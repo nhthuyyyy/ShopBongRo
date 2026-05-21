@@ -374,7 +374,7 @@
         <div class="footer-inner">
             <div class="footer-col">
                 <div class="footer-logo">
-                    <span class="logo-rain">RAINBU</span><span class="logo-shop">SHOP</span>
+                    <span class="logo-rain">Milkun</span><span class="logo-shop">SHOP</span>
                 </div>
                 <p>Cửa hàng bóng rổ uy tín số 1 Sài Gòn. Chuyên cung cấp bóng rổ, giày, áo và phụ kiện chính hãng.</p>
                 <div class="social-links">
@@ -407,7 +407,7 @@
             <div class="footer-col">
                 <h4>Liên Hệ</h4>
                 <ul class="contact-list">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Nguyễn Huệ, Quận 1, TP.HCM</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 180 Cao Lỗ, Phường 4, Quận 8, TP Hồ Chí Minh</li>
                     <li><i class="fas fa-phone"></i> 0909 123 456</li>
                     <li><i class="fas fa-envelope"></i> Milkun@gmail.com</li>
                     <li><i class="fas fa-clock"></i> 8:00 - 21:00 (Tất cả các ngày)</li>
@@ -424,12 +424,56 @@
         <i class="fas fa-chevron-up"></i>
     </button>
 
+    <!-- CART MODAL -->
+    <div id="cartModal" class="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>🛒 Giỏ Hàng</h2>
+                <button class="cart-modal-close" onclick="closeCart()">✕</button>
+            </div>
+            <div class="cart-modal-body">
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-cart">Giỏ hàng trống</p>
+                </div>
+            </div>
+            <div class="cart-modal-footer">
+                <div class="cart-total">
+                    <strong>Tổng cộng:</strong>
+                    <span id="cartTotal">0₫</span>
+                </div>
+                <button class="btn-primary" onclick="checkout()">Thanh Toán</button>
+                <button class="btn-outline" onclick="closeCart()">Tiếp Tục Mua</button>
+            </div>
+        </div>
+    </div>
+
     <script>
         // ===== GIỎ HÀNG =====
-        let cartCount = 0;
+        let cart = [];
+
         function addToCart(btn) {
-            cartCount++;
-            document.querySelector('.cart-count').textContent = cartCount;
+            // Lấy thông tin sản phẩm từ card
+            const card = btn.closest('.product-card');
+            const productName = card.querySelector('.product-info h3').textContent;
+            const productPrice = parseInt(card.querySelector('.price-new').textContent.replace(/\D/g, ''));
+            
+            // Kiểm tra sản phẩm đã có trong giỏ chưa
+            const existingItem = cart.find(item => item.name === productName);
+            
+            if (existingItem) {
+                existingItem.quantity++;
+            } else {
+                cart.push({
+                    name: productName,
+                    price: productPrice,
+                    quantity: 1
+                });
+            }
+            
+            // Cập nhật số lượng giỏ hàng
+            updateCartCount();
+            
+            // Hiệu ứng nút
             btn.textContent = '✓ Đã Thêm!';
             btn.style.background = '#28a745';
             setTimeout(() => {
@@ -437,6 +481,107 @@
                 btn.style.background = '';
             }, 1500);
         }
+
+        function updateCartCount() {
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            document.querySelector('.cart-count').textContent = totalItems;
+        }
+
+        function openCart() {
+            renderCart();
+            document.getElementById('cartModal').style.display = 'flex';
+        }
+
+        function closeCart() {
+            document.getElementById('cartModal').style.display = 'none';
+        }
+
+        function renderCart() {
+            const cartItemsDiv = document.getElementById('cartItems');
+            
+            if (cart.length === 0) {
+                cartItemsDiv.innerHTML = '<p class="empty-cart">Giỏ hàng trống</p>';
+                document.getElementById('cartTotal').textContent = '0₫';
+                return;
+            }
+
+            let html = '';
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                html += `
+                    <div class="cart-item">
+                        <div class="cart-item-info">
+                            <h4>${item.name}</h4>
+                            <p class="cart-item-price">${item.price.toLocaleString()}₫</p>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <button onclick="decreaseQuantity(${index})">-</button>
+                            <input type="number" value="${item.quantity}" readonly>
+                            <button onclick="increaseQuantity(${index})">+</button>
+                        </div>
+                        <div class="cart-item-total">
+                            ${itemTotal.toLocaleString()}₫
+                        </div>
+                        <button class="cart-item-remove" onclick="removeFromCart(${index})">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                `;
+            });
+
+            cartItemsDiv.innerHTML = html;
+            document.getElementById('cartTotal').textContent = total.toLocaleString() + '₫';
+        }
+
+        function increaseQuantity(index) {
+            cart[index].quantity++;
+            updateCartCount();
+            renderCart();
+        }
+
+        function decreaseQuantity(index) {
+            if (cart[index].quantity > 1) {
+                cart[index].quantity--;
+            } else {
+                removeFromCart(index);
+            }
+            updateCartCount();
+            renderCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            renderCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Giỏ hàng trống!');
+                return;
+            }
+            alert('Cảm ơn bạn đã mua hàng! Tổng: ' + document.getElementById('cartTotal').textContent);
+            cart = [];
+            updateCartCount();
+            closeCart();
+        }
+
+        // Click vào giỏ hàng để mở
+        document.querySelector('.cart-btn').addEventListener('click', (e) => {
+            e.preventDefault();
+            openCart();
+        });
+
+        // Đóng modal khi click ngoài
+        document.getElementById('cartModal').addEventListener('click', (e) => {
+            if (e.target.id === 'cartModal') {
+                closeCart();
+            }
+        });
 
         // ===== HAMBURGER MENU =====
         const hamburger = document.getElementById('hamburger');

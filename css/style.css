@@ -466,10 +466,20 @@ header {
     font-size: 10rem;
     animation: bounce 2s infinite;
     filter: drop-shadow(0 0 30px rgba(255,107,0,0.5));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ball-animation img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    animation: bounce 2s infinite;
 }
 @keyframes bounce {
     0%, 100% { transform: translateY(0) rotate(0deg); }
-    50% { transform: translateY(-20px) rotate(15deg); }
+    50% { transform: translateY(-30px) rotate(15deg); }
 }
 
 /* ===== BUTTONS ===== */
@@ -617,11 +627,25 @@ header {
 
 .product-img {
     background: linear-gradient(135deg, #f8f8f8, #efefef);
-    height: 180px;
+    height: 280px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+
+.product-img img {
+    width: 90%;
+    height: 90%;
+    object-fit: contain;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-img img {
+    transform: scale(1.08);
 }
 .product-info { padding: 20px; }
 .product-cat {

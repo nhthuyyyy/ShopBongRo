@@ -11,7 +11,8 @@ const products = [
         reviews: 128,
         description: 'Size 7 - Da tổng hợp cao cấp, chuẩn thi đấu NBA',
         badge: 'HOT',
-        emoji: '🏀'
+        image: '/images/products/spalding-nba-ball.png',
+        imageAlt: 'Bóng rổ Spalding NBA size 7 da tổng hợp chính hãng'
     },
     {
         id: 2,
@@ -23,7 +24,8 @@ const products = [
         reviews: 93,
         description: 'Bóng da thật cao cấp, dùng cho sân trong nhà',
         badge: 'NEW',
-        emoji: '🏀'
+        image: '/images/products/wilson-evolution-ball.png',
+        imageAlt: 'Bóng Wilson Evolution da thật cao cấp'
     },
     {
         id: 3,
@@ -34,7 +36,8 @@ const products = [
         rating: 4,
         reviews: 76,
         description: 'Bóng thi đấu chuyên nghiệp, độ bền cao',
-        emoji: '🏀'
+        image: '/images/products/molten-gg7-ball.png',
+        imageAlt: 'Bóng Molten GG7 thi đấu chuyên nghiệp'
     },
     
     // GIÀY
@@ -48,7 +51,8 @@ const products = [
         reviews: 256,
         description: 'Giày bóng rổ huyền thoại, đế cao su chống trượt',
         badge: 'NEW',
-        emoji: '👟'
+        image: '/images/jordan.png',
+        imageAlt: 'Giày Nike Air Jordan 1 Retro huyền thoại'
     },
     {
         id: 5,
@@ -59,7 +63,8 @@ const products = [
         rating: 4,
         reviews: 145,
         description: 'Giày bóng rổ cao cấp, thoải mái và bền',
-        emoji: '👟'
+        image: '/images/damdame8.png',
+        imageAlt: 'Giày Adidas Dame 8 cao cấp'
     },
     {
         id: 6,
@@ -70,7 +75,8 @@ const products = [
         rating: 5,
         reviews: 189,
         description: 'Giày của huyền thoại LeBron James',
-        emoji: '👟'
+        image: '/images/products/lebron-20-shoe.png',
+        imageAlt: 'Giày Nike LeBron 20'
     },
     {
         id: 7,
@@ -81,7 +87,8 @@ const products = [
         rating: 4,
         reviews: 112,
         description: 'Giày bóng rổ nhẹ và nhanh nhạy',
-        emoji: '👟'
+        image: '/images/products/kyrie-9-shoe.png',
+        imageAlt: 'Giày Nike Kyrie 9 nhẹ nhanh nhạy'
     },
     
     // ÁO THI ĐẤU
@@ -95,7 +102,8 @@ const products = [
         reviews: 89,
         description: 'Vải thoáng khí, in số chính hãng, đủ size S-XXL',
         badge: 'SALE',
-        emoji: '👕'
+        image: '/images/products/lakers-lebron-23-jersey.png',
+        imageAlt: 'Áo NBA Lakers #23 LeBron vải thoáng khí'
     },
     {
         id: 9,
@@ -106,7 +114,8 @@ const products = [
         rating: 5,
         reviews: 134,
         description: 'Áo thi đấu chính hãng NBA',
-        emoji: '👕'
+        image: '/images/products/warriors-curry-30-jersey.png',
+        imageAlt: 'Áo NBA Warriors #30 Curry chính hãng'
     },
     {
         id: 10,
@@ -117,7 +126,8 @@ const products = [
         rating: 5,
         reviews: 201,
         description: 'Áo huyền thoại của Michael Jordan',
-        emoji: '👕'
+        image: '/images/products/bulls-jordan-23-jersey.png',
+        imageAlt: 'Áo NBA Bulls #23 Jordan huyền thoại'
     },
     {
         id: 11,
@@ -128,7 +138,8 @@ const products = [
         rating: 4,
         reviews: 67,
         description: 'Áo thi đấu có thể in tên và số tùy chỉnh',
-        emoji: '👕'
+        image: '/images/products/custom-jersey.png',
+        imageAlt: 'Áo thi đấu custom in tên số'
     },
     
     // PHỤ KIỆN
@@ -141,7 +152,8 @@ const products = [
         rating: 4,
         reviews: 45,
         description: 'Mũ lưỡi trai NBA chính hãng, nhiều đội tuyển',
-        emoji: '🧢'
+        image: '/images/nonLaker.png',
+        imageAlt: 'Mũ NBA Snapback chính hãng'
     },
     {
         id: 13,
@@ -152,7 +164,8 @@ const products = [
         rating: 4,
         reviews: 67,
         description: 'Bộ băng tay + băng đầu, thấm hút mồ hôi tốt',
-        emoji: '🧤'
+        image: '/images/products/wristband-headband.png',
+        imageAlt: 'Băng tay băng đầu bóng rổ'
     },
     {
         id: 14,
@@ -163,7 +176,8 @@ const products = [
         rating: 4,
         reviews: 52,
         description: 'Túi chuyên dụng đựng bóng rổ, bền và tiện lợi',
-        emoji: '🎒'
+        image: '/images/products/basketball-bag.png',
+        imageAlt: 'Túi đựng bóng rổ chuyên dụng'
     },
     {
         id: 15,
@@ -174,7 +188,8 @@ const products = [
         rating: 5,
         reviews: 98,
         description: 'Vớ chuyên dụng, thoáng khí và thoải mái',
-        emoji: '🧦'
+        image: '/images/products/basketball-socks.png',
+        imageAlt: 'Vớ bóng rổ thoáng khí'
     },
     {
         id: 16,
@@ -185,7 +200,8 @@ const products = [
         rating: 4,
         reviews: 73,
         description: 'Bảo vệ cổ chân chuyên nghiệp, chống chấn thương',
-        emoji: '🦵'
+        image: '/images/products/ankle-support.png',
+        imageAlt: 'Bảo vệ cổ chân chuyên nghiệp'
     }
 ];
 
@@ -288,7 +304,13 @@ function renderProducts() {
         html += `
             <div class="product-card">
                 ${badgeHTML}
-                <div class="product-img">${product.emoji}</div>
+                <div class="product-img">
+                    <img src="${product.image}" 
+                         alt="${product.imageAlt}"
+                         loading="lazy"
+                         width="300"
+                         height="300">
+                </div>
                 <div class="product-info">
                     <span class="product-cat">${getCategoryName(product.category)}</span>
                     <h3>${product.name}</h3>
